@@ -1,0 +1,41 @@
+#include <windows.h>
+// http://msdn.microsoft.com/en-us/library/aa380599(v=vs.85).aspx
+
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION 3,02,0,0
+	PRODUCTVERSION 3,02,0,0
+	FILEFLAGSMASK 0x17L
+	// http://msdn.microsoft.com/en-us/library/aa381058(VS.85).aspx
+	#ifdef _DEBUG
+	FILEFLAGS 0x1L
+	#else
+	FILEFLAGS 0x0L
+	#endif
+	FILEOS 0x4L
+	FILETYPE 0x1L
+	FILESUBTYPE 0x0L
+//	FILEOS VOS_NT_WINDOWS32
+//	FILETYPE VFT_APP
+//	FILESUBTYPE VFT2_UNKNOWN
+
+BEGIN
+	BLOCK	"VarFileInfo"
+	BEGIN
+		VALUE	"Translation",	0x409,	1200
+	END
+	BLOCK	"StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+		BEGIN
+			VALUE "Comments", "Tesseract-ocr (http://code.google.com/p/tesseract-ocr/) by Tesseract Community "
+			VALUE "CompanyName", "http://code.google.com/p/tesseract-ocr/"
+			VALUE "FileDescription", "Tesseract OCR library"
+			VALUE "FileVersion", "3,02,0,0"
+			VALUE "InternalName", "libtesseract"
+			VALUE "LegalCopyright", "The code is all licensed with the Apache 2.0. Copyright (c) 1985-2012"
+			VALUE "OriginalFilename", "libtesseract.dll"
+			VALUE "ProductName", "Tesseract-ocr Dynamic Link Library"
+			VALUE "ProductVersion", "3.02"
+		END
+	END
+END
