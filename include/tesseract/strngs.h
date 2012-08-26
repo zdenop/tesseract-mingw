@@ -21,9 +21,9 @@
 #define           STRNGS_H
 
 #include          <string.h>
+#include          "platform.h"
 #include          "memry.h"
 #include          "serialis.h"
-#include          "genericvector.h"
 
 // STRING_IS_PROTECTED means that  string[index] = X is invalid
 // because you have to go through strings interface to modify it.
@@ -35,16 +35,9 @@
 // cannot assume we know the strlen.
 #define STRING_IS_PROTECTED  0
 
-#ifdef CCUTIL_EXPORTS
-#define CCUTIL_API __declspec(dllexport)
-#elif defined(CCUTIL_IMPORTS)
-#define CCUTIL_API __declspec(dllimport)
-#else
-#define CCUTIL_API
-#endif
+template <typename T> class GenericVector;
 
-
-class DLLSYM STRING
+class TESS_API STRING
 {
   public:
     STRING();

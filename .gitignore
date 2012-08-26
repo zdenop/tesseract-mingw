@@ -1,0 +1,8 @@
+*~
+temp*
+Makefile
+Makefile.Debug
+Makefile.Release
+object_script.*
+*.txt
+*.user
